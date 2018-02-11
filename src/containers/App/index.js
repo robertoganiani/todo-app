@@ -13,8 +13,6 @@ class App extends Component {
     todoText: ''
   };
 
-  componentWillReceiveProps(nextProps) {}
-
   onInputChange = todoText => {
     this.setState({ todoText });
   };
