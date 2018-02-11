@@ -26,8 +26,8 @@ class App extends Component {
     this.setState({ todoText: '' });
   };
 
-  handleOnDeleteClick = todoId => {
-    this.props.onDeleteTodo(todoId);
+  handleOnRemoveClick = todoId => {
+    this.props.onRemoveTodo(todoId);
   };
 
   renderTodosList = () => {
@@ -36,7 +36,7 @@ class App extends Component {
       <ListItem
         key={todo.todoId}
         todo={todo}
-        handleOnDeleteClick={this.handleOnDeleteClick}
+        handleOnRemoveClick={this.handleOnRemoveClick}
       />
     ));
   };
@@ -67,7 +67,7 @@ const mapStateToProps = ({ app }) => ({ todos: app.todos });
 
 const mapDispatchToProps = dispatch => ({
   onAddTodo: todo => dispatch(addTodo(todo)),
-  onDeleteTodo: todoId => dispatch(removeTodo(todoId))
+  onRemoveTodo: todoId => dispatch(removeTodo(todoId))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

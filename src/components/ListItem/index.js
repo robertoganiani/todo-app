@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 
-const ListItem = ({ todo: { todoId, todoText }, handleOnDeleteClick }) => (
+const ListItem = ({ todo: { todoId, todoText }, handleOnRemoveClick }) => (
   <Fragment>
     <li>
       {todoText}
       <button
-        onClick={() => handleOnDeleteClick(todoId)}
+        onClick={() => handleOnRemoveClick(todoId)}
         style={{ marginLeft: '10px' }}
       >
         X
