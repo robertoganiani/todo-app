@@ -1,17 +1,15 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 const ListItem = ({ todo: { todoId, todoText }, handleOnRemoveClick }) => (
-  <Fragment>
-    <li>
-      {todoText}
-      <button
-        onClick={() => handleOnRemoveClick(todoId)}
-        style={{ marginLeft: '10px' }}
-      >
-        X
-      </button>
-    </li>
-  </Fragment>
+  <li>
+    {todoText}
+    <button
+      onClick={() => handleOnRemoveClick(todoId)}
+      style={{ marginLeft: '10px' }}
+    >
+      X
+    </button>
+  </li>
 );
 
 export default ListItem;
